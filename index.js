@@ -14,18 +14,31 @@ function summonCaptainPlanet(planeteerCalls){
   return summonCaptainPlanetByShouting
 }
 
-//helper
-function isShorterThanFive(words){
-  return words.length < 5 // function  words[n].length < 5
+/* alternative
+
+function isShorterThanFive(aWord){ // this is a word
+  return aWord.length < 5 //this will return true or false
 }
 
-function longPlaneteerCalls(words) {
-  if (words.every(isShorterThanFive)){
+function longPlaneteerCalls(arrayOfWords) {
+  if (arrayOfWords.every(isShorterThanFive)){ //If all elements in the array is shorter than five
     return false
   } else {
     return true
   }
 }
+*/
+// Access each element, check against a condition, If matches, then If method returns true, exit function
+//if nothing matches, then function returns false.
+
+function longPlaneteerCalls(arrayOfWords){
+    for(var n=0;n<arrayOfWords.length;n++){
+        var eachWordLength = arrayOfWords[n].length;
+        if (eachWordLength > 4){
+            return true}
+          }
+          return false;
+        }
 
 /*
 Check first element foods[n], if it matches cheese names.
