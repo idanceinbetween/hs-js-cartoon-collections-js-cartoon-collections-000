@@ -37,14 +37,14 @@ function longPlaneteerCalls(arrayOfWords){
         if (eachWordLength > 4){
             return true}
           }
-          return false;
+        return false;
         }
 
 /*
 Check first element foods[n], if it matches cheese names.
 If yes, return foods[n], end function.
 If not, move on to the next element foods[n+1].
-If running the loop returns nothing, return `no cheese!` instead.
+If running the loop with switch statements returns nothing, return `no cheese!` instead.
 */
 
 function findTheCheese (foods) {
