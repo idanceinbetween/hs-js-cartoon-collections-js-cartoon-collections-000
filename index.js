@@ -14,22 +14,35 @@ function summonCaptainPlanet(planeteerCalls){
   return summonCaptainPlanetByShouting
 }
 
-/* alternative
-
-function isShorterThanFive(aWord){ // this is a word
-  return aWord.length < 5 //this will return true or false
-}
-
-function longPlaneteerCalls(arrayOfWords) {
-  if (arrayOfWords.every(isShorterThanFive)){ //If all elements in the array is shorter than five
-    return false
-  } else {
-    return true
+/*alternative 1
+function summonCaptainPlanet(planeteerCalls){
+  var summonCaptainPlanetByShouting = new Array ();
+  var n=0
+  while(n<planeteerCalls.length){
+    summonCaptainPlanetByShouting.push(`${planeteerCalls[n].toUpperCase()}!`)
+    n++
   }
+  return summonCaptainPlanetByShouting
+}*/
+
+/*alternative 2
+function summonCaptainPlanet(planeteerCalls){
+  var summonCaptainPlanetByShouting = new Array ();
+  var e=0
+  var n=0
+  while(e==0){
+    summonCaptainPlanetByShouting.push(`${planeteerCalls[n].toUpperCase()}!`)
+    n++
+    if (n==planeteerCalls.length){
+      e=1
+    }
+  }
+  return summonCaptainPlanetByShouting
 }
 */
+
 // Access each element, check against a condition, If matches, then If method returns true, exit function
-//if nothing matches, then function returns false.
+// If nothing matches, then function returns false.
 
 function longPlaneteerCalls(arrayOfWords){
     for(var n=0;n<arrayOfWords.length;n++){
@@ -39,6 +52,21 @@ function longPlaneteerCalls(arrayOfWords){
           }
         return false;
         }
+
+/* alternative
+
+function isShorterThanFive(aWord){ // this is a word
+  return aWord.length < 5 //this will return true or false
+  }
+
+function longPlaneteerCalls(arrayOfWords) {
+  if (arrayOfWords.every(isShorterThanFive)){ //If all elements in the array is shorter than five
+  return false // no element is longer than 4 / all elements are shorter than 5
+  } else {
+  return true
+  }
+}
+*/
 
 /*
 Check first element foods[n], if it matches cheese names.
