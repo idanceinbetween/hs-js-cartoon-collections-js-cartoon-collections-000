@@ -86,3 +86,12 @@ function findTheCheese (foods) {
     }
     return `no cheese!`
   }
+
+function wordsWithB (arrayOfWords){
+  var newArrayOfWords = new Array();
+  for(var n=0;n<arrayOfWords.length;n++){
+    //condition
+    newArrayofWords.push(arrayOfWords[n]);
+  }
+  return newArrayofWords//new array of words only starts with the letter 'b'
+}
