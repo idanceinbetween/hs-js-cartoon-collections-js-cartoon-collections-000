@@ -90,8 +90,15 @@ function findTheCheese (foods) {
 function wordsWithB (arrayOfWords){
   var newArrayOfWords = new Array();
   for(var n=0;n<arrayOfWords.length;n++){
-    //condition
-    newArrayofWords.push(arrayOfWords[n]);
+    /*if(arrayOfWords[n][0] == 'b'){//condition how to access the first character of the said element*/
+    switch(arrayOfWords[n][0]){
+      case "b":
+      case "B":
+      newArrayofWords.push(arrayOfWords[n]);
+    }
   }
   return newArrayofWords//new array of words only starts with the letter 'b'
 }
+
+/*.startsWith('b')
+.LowerCase() ===*/
