@@ -17,7 +17,7 @@ function dwarfRollCall(dwarves) {
 }*/
 
 function dwarfRollCall(dwarves) {
-  var dwarvesFullList = new Array()
+  var dwarvesFullList = new Array();
   var halfTheLine = parseInt(dwarves.length/2);
   for (var n=halfTheLine;n<dwarves.length;n++){
     dwarvesFullList.push(`${[n+1]}. ${dwarves[n]} `)
