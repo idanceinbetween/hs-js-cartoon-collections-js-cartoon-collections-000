@@ -6,10 +6,20 @@
   return `${dwarvesFullList.join(``)}`
 }*/
 
+/*first half
 function dwarfRollCall(dwarves) {
   var dwarvesFullList = new Array()
   var halfTheLine = parseInt(dwarves.length/2);
   for (var n=0;n<halfTheLine;n++){
+    dwarvesFullList.push(`${[n+1]}. ${dwarves[n]} `)
+  }
+  return `${dwarvesFullList.join(``)}`
+}*/
+
+function dwarfRollCall(dwarves) {
+  var dwarvesFullList = new Array()
+  var halfTheLine = parseInt(dwarves.length/2);
+  for (var n=halfTheLine;n<dwarves.length;n++){
     dwarvesFullList.push(`${[n+1]}. ${dwarves[n]} `)
   }
   return `${dwarvesFullList.join(``)}`
